@@ -5,19 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Projeto_AspNetCore_xUnit_Moq.Models;
+using Projeto_AspNetCore_xUnit_Moq.WebApp.Models;
 
 namespace Projeto_AspNetCore_xUnit_Moq.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();

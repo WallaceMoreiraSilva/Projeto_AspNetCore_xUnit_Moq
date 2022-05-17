@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto_AspNetCore_xUnit_Moq.Core\Projeto_AspNetCore_xUnit_Moq.Core.csproj" />
+    <ProjectReference Include="..\Projeto_AspNetCore_xUnit_Moq.Infrastructure\Projeto_AspNetCore_xUnit_Moq.Infrastructure.csproj" />
+    <ProjectReference Include="..\Projeto_AspNetCore_xUnit_Moq.Services\Projeto_AspNetCore_xUnit_Moq.Services.csproj" />
+  </ItemGroup>
+
 </Project>

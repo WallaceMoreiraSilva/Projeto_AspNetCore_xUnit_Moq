@@ -1,6 +1,6 @@
 using System;
 
-namespace Projeto_AspNetCore_xUnit_Moq.Models
+namespace Projeto_AspNetCore_xUnit_Moq.WebApp.Models
 {
     public class ErrorViewModel
     {
