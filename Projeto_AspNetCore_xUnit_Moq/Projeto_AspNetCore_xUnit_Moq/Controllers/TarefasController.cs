@@ -2,6 +2,7 @@
 using Projeto_AspNetCore_xUnit_Moq.WebApp.Models;
 using Projeto_AspNetCore_xUnit_Moq.Core.Commands;
 using Projeto_AspNetCore_xUnit_Moq.Services.Handlers;
+using Projeto_AspNetCore_xUnit_Moq.Infrastructure;
 
 namespace Projeto_AspNetCore_xUnit_Moq.Controllers
 {
@@ -20,8 +21,11 @@ namespace Projeto_AspNetCore_xUnit_Moq.Controllers
             }
 
             var comando = new CadastraTarefa(model.Titulo, categoria, model.Prazo);
-            var handler = new CadastraTarefaHandler();
+            
+            var repo = new RepositorioTarefa();
+            var handler = new CadastraTarefaHandler(repo); 
             handler.Execute(comando);
+
             return Ok();
         }
     }
