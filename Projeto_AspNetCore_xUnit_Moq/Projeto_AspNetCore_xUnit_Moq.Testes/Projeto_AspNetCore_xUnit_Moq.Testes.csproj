@@ -19,4 +19,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto_AspNetCore_xUnit_Moq.Core\Projeto_AspNetCore_xUnit_Moq.Core.csproj" />
+    <ProjectReference Include="..\Projeto_AspNetCore_xUnit_Moq.Services\Projeto_AspNetCore_xUnit_Moq.Services.csproj" />
+  </ItemGroup>
+
 </Project>
