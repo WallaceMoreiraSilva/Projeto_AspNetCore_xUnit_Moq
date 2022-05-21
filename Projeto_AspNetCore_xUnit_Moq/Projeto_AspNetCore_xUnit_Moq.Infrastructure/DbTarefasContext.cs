@@ -15,6 +15,8 @@ namespace Projeto_AspNetCore_xUnit_Moq.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (optionsBuilder.IsConfigured) return;
+
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=DbTarefas;Trusted_Connection=true");
         }
 

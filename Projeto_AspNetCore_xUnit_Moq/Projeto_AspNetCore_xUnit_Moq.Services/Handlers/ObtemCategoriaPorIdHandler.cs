@@ -8,9 +8,9 @@ namespace Projeto_AspNetCore_xUnit_Moq.Services.Handlers
     {
         IRepositorioTarefas _repo;
 
-        public ObtemCategoriaPorIdHandler()
+        public ObtemCategoriaPorIdHandler(IRepositorioTarefas repositorio)
         {
-            _repo = new RepositorioTarefa();
+            _repo = repositorio;
         }
         public Categoria Execute(ObtemCategoriaPorId comando)
         {

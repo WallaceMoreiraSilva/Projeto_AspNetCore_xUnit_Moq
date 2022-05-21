@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using Projeto_AspNetCore_xUnit_Moq.Core.Commands;
 using Projeto_AspNetCore_xUnit_Moq.Core.Models;
+using Projeto_AspNetCore_xUnit_Moq.Infrastructure;
 using Projeto_AspNetCore_xUnit_Moq.Services.Handlers;
 using System;
 using System.Linq;
@@ -15,7 +17,11 @@ namespace Projeto_AspNetCore_xUnit_Moq.Testes
             //arrange
             var comando = new CadastraTarefa("Estudar Xunit", new Categoria("Estudo"), new DateTime(2019, 12, 31));
 
-            var repo = new RepositorioFake();
+            var options = new DbContextOptionsBuilder<DbTarefasContext>()
+                .UseInMemoryDatabase("DbTarefasContext")
+                .Options;
+            var contexto = new DbTarefasContext(options);
+            var repo = new RepositorioTarefa(contexto);
 
             var handler = new CadastraTarefaHandler(repo);
 
