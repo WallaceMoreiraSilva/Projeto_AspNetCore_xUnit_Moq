@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Projeto_AspNetCore_xUnit_Moq.Core.Commands;
 using Projeto_AspNetCore_xUnit_Moq.Core.Models;
 using Projeto_AspNetCore_xUnit_Moq.Infrastructure;
