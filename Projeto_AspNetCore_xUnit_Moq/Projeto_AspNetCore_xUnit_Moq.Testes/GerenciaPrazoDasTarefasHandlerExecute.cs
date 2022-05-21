@@ -42,6 +42,7 @@ namespace Projeto_AspNetCore_xUnit_Moq.Testes
             var options = new DbContextOptionsBuilder<DbTarefasContext>()
                 .UseInMemoryDatabase("DbTarefasContext")
                 .Options;
+
             var contexto = new DbTarefasContext(options);
             var repo = new RepositorioTarefa(contexto);
 
