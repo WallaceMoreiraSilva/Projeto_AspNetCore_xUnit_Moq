@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Projeto_AspNetCore_xUnit_Moq.WebApp.Models;
 
-namespace Projeto_AspNetCore_xUnit_Moq.Controllers
+namespace Projeto_AspNetCore_xUnit_Moq.WebApp.Controllers
 {
     public class HomeController : Controller
     {
